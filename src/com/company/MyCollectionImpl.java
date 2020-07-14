@@ -13,16 +13,18 @@ public class MyCollectionImpl<T> implements MyCollectionApi<T>, FullNameApi<T> {
         size = 0;
     }
 
-    /*public T listArray (int number) {
-        if (number > size) {
-            return null;
-        } else {
-            for (int i = 0; i < number; i++) {
-                return (T) items[i];
+    public void listArray (int number) {
+        int returnSize = 0;
+        if (number >= size) {
+            returnSize = size;
+        } else
+            returnSize = number;
+
+            for (int i = 0; i < returnSize; i++) {
+                System.out.println(items[i].toString());
             }
+            return;
         }
-        return ;
-    }*/
 
 
     @Override
