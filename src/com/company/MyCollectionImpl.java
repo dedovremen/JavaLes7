@@ -13,12 +13,12 @@ public class MyCollectionImpl<T> implements MyCollectionApi<T>, FullNameApi<T> {
         size = 0;
     }
 
-    public void listArray (int number) {
+    public void listArray (int numberOfElements) {
         int returnSize = 0;
-        if (number >= size) {
+        if (numberOfElements >= size) {
             returnSize = size;
         } else
-            returnSize = number;
+            returnSize = numberOfElements;
 
             for (int i = 0; i < returnSize; i++) {
                 System.out.println(items[i].toString());
